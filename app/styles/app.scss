@@ -101,7 +101,7 @@ $landing-background-color: #e24b31;
       width: 590px;
       background-repeat: no-repeat;
       background-position: -50px -70px;
-      @include background-image-retina('ember-london-tomster', 'png', 425, 590);
+      @include background-image-retina('tomster', 'png', 425, 590);
     }
 
   }
@@ -138,7 +138,7 @@ $landing-background-color: #e24b31;
       float: right;
       background-repeat: no-repeat;
       background-position: 250px 0px;
-      @include background-image-retina('ember-london-project-nights', 'jpg', 1100, 400);
+      @include background-image-retina('project-nights', 'jpg', 1100, 400);
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
   }
