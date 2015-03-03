@@ -16,6 +16,7 @@ deploy:
   provider: divshot
   environment:
     develop: development
+    staging: staging
     master: production
   skip_cleanup: true
   api_key:
