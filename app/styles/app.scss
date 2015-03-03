@@ -1,0 +1,145 @@
+@import "settings";
+@import "mixins";
+@import "foundation";
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  // @include media($mobile) {
+  //   text-rendering: optimizeSpeed;
+  // }
+}
+
+.container {
+  width: 960px;
+  max-width: none;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+$landing-background-color: #e24b31;
+
+.landing-cta {
+  width: 960px;
+  max-width: none;
+  overflow: auto;
+  position: absolute;
+  margin: auto;
+  top: 100px; left: 0; right: 0;
+  z-index: 1;
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    color: #FCFCFC;
+    line-height: 70px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-shadow: 0 1px 1px darken($landing-background-color, 10%);
+
+    a {
+      color: #FCFCFC;
+    }
+
+    a:hover {
+      color: #FCFCFC;
+    }
+  }
+
+  h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 21px;
+    color: #FCFCFC;
+    line-height: 24px;
+    padding: 2px 0 25px 3px;
+    text-shadow: 0 1px 1px darken($landing-background-color, 10%);
+  }
+
+  h3 {
+    color: #FCFCFC;
+    a {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      color: #FCFCFC;
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-shadow: 0 1px 1px darken($landing-background-color, 4%);
+      border: 1px solid lighten($landing-background-color, 12%);
+      background: lighten($landing-background-color, 8%);
+    }
+  }
+
+}
+
+.container {
+
+  .row .columns {
+    background: #e4e4e4;
+    border: 1px solid #ccc;
+    background: #f4f4f4;
+    height: 60px;
+    line-height: 60px;
+    margin-bottom: 20px;
+  }
+}
+
+.landing-cover {
+  border-bottom: 1px solid darken($landing-background-color, 10%);
+  background-color: $landing-background-color;
+  overflow: hidden;
+
+  .row {
+    height: 399px;
+    overflow: hidden;
+
+    .london-tomster {
+      height: 425px;
+      width: 590px;
+      background-repeat: no-repeat;
+      background-position: -50px -70px;
+      @include background-image-retina('ember-london-tomster', 'png', 425, 590);
+    }
+
+  }
+}
+.project-nights {
+
+  .landing-cta {
+
+    h1 a {
+      @include linkUnderlines(black, #FCFCFC);
+    }
+
+    h2 {
+      padding-top: 10px;
+      text-shadow: none;
+    }
+
+    h3 {
+      a {
+        text-shadow: 0 1px 1px darken(black, 4%);
+        border: 1px solid lighten(black, 30%);
+        background: lighten(black, 25%);
+      }
+    }
+  }
+
+  .landing-cover {
+    background-color: black;
+    border-bottom: none;
+
+    .promo-image {
+      width: 1100px;
+      height: 400px;
+      float: right;
+      background-repeat: no-repeat;
+      background-position: 250px 0px;
+      @include background-image-retina('ember-london-project-nights', 'jpg', 1100, 400);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+}
