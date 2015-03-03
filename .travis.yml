@@ -1,20 +1,22 @@
----
 language: node_js
-
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install:
-  - "npm config set spin false"
-  - "npm install -g npm@^2"
-
+- npm config set spin false
+- npm install -g npm@^2
 install:
-  - npm install -g bower
-  - npm install
-  - bower install
-
+- npm install -g bower
+- npm install
+- bower install
 script:
-  - npm test
+- npm test
+deploy:
+  provider: divshot
+  environment:
+    develop: development
+    master: production
+  skip_cleanup: true
+  api_key:
+    secure: Okgg8G2FvuJd9yaasqXbq0M8zISd/13fMHE9ntjT7J2xh0XnbXzylAtziqIbjNrhPyBWUdPmVo/onxfE9Oeaz4LZ4aiL1Hd3dAt/esCkQ0G9wTMGFg0VP0DykvjZ7q6b7xsSLDIKZJbj540SBPWB2AAiDG2+v9q7vyfxMa4dGIo=
