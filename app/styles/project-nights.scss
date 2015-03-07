@@ -1,4 +1,9 @@
 .project-nights {
+
+  header {
+    border-bottom: 1px solid black;
+  }
+
   .landing-cta {
     h1 a {
       @include linkUnderlines(black, #FCFCFC);
@@ -30,6 +35,25 @@
       background-position: 250px 0px;
       @include background-image-retina('project-nights', 'jpg', 1100, 400);
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .stats {
+    $stats-background-color: lighten(#777, 42%);
+    background-color: $stats-background-color;
+    border-bottom: 1px solid lighten(#777, 35%);
+
+    .frame {
+      border-top: 1px solid lighten($stats-background-color, 3%);
+      border-bottom: 1px solid lighten($stats-background-color, 5%);
+    }
+
+    p {
+      color: lighten(#555, 5%);
+      a {
+        color: #555;
+        @include linkUnderlines($stats-background-color, #555);
+      }
     }
   }
 }

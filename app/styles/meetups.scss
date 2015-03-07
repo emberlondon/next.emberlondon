@@ -1,40 +1,43 @@
-.landing-cover {
-  border-bottom: 1px solid darken($landing-background-color, 10%);
-  background-color: $landing-background-color;
-  overflow: hidden;
+.meetups {
 
-  .row {
-    height: 399px;
+  header {
+    border-bottom: 1px solid darken($emberlondon-primary, 10%);
+  }
+
+  .landing-cover {
+    border-bottom: 1px solid darken($emberlondon-primary, 10%);
+    background-color: $emberlondon-primary;
     overflow: hidden;
 
     .london-tomster {
-      height: 425px;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      z-index: 1;
+      height: 400px + $header-height;
       width: 590px;
       background-repeat: no-repeat;
-      background-position: -50px -70px;
+      background-position: -40px -30px;
       @include background-image-retina('tomster', 'png', 425, 590);
     }
-
   }
-}
 
-.stats {
-  $stats-background-color: lighten($landing-background-color, 42%);
-  background-color: $stats-background-color;
-  border-bottom: 1px solid lighten($landing-background-color, 35%);
-  
-  .frame {
-    border-top: 1px solid lighten($stats-background-color, 3%);
-    border-bottom: 1px solid lighten($stats-background-color, 5%);
-  }
-  
-  p {
-    color: lighten($landing-background-color, 5%);
-    margin: 10px 0 10px 0;
-    font-size: 14px;
-    a {
-      color: $landing-background-color;
-      @include linkUnderlines($stats-background-color, $landing-background-color);
+  .stats {
+    $stats-background-color: lighten($emberlondon-primary, 42%);
+    background-color: $stats-background-color;
+    border-bottom: 1px solid lighten($emberlondon-primary, 35%);
+
+    .frame {
+      border-top: 1px solid lighten($stats-background-color, 3%);
+      border-bottom: 1px solid lighten($stats-background-color, 5%);
+    }
+
+    p {
+      color: lighten($emberlondon-primary, 5%);
+      a {
+        color: $emberlondon-primary;
+        @include linkUnderlines($stats-background-color, $emberlondon-primary);
+      }
     }
   }
 }
